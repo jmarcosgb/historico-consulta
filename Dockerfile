@@ -6,5 +6,5 @@ WORKDIR /home/service
 
 RUN pip3 install -r requirements.txt
 
-EXPOSE 80
-CMD ["gunicorn", "api:app"]
+EXPOSE 8000
+CMD ["gunicorn", "--config=gunicorn.py", "api:app"]
